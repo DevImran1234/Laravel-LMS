@@ -19,9 +19,7 @@ interface LoginProps {
 
 export default function Login({ status, canResetPassword }: LoginProps) {
 
-    // Handler for Google OAuth
     const handleGoogleLogin = () => {
-        // Redirect to Laravel backend Google redirect route
         window.location.href = `${import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'}/auth/google/redirect`;
     };
 
